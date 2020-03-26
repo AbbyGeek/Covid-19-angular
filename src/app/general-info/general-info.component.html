@@ -1,0 +1,27 @@
+<div class="container-general">
+    <h3>Around The World</h3>
+    <table>
+        <tr>
+            <th>Country</th>
+            <th>Cases</th>
+            <th>Today's Cases</th>
+            <th>Deaths</th>
+            <th>Today's Deaths</th>
+            <th>Recovered</th>
+            <th>Active</th>
+            <th>Critical</th>
+            <th>Cases per Million</th>
+        </tr>
+        <tr *ngFor="let item of restItems">
+            <td>{{item.country}}</td>
+            <td>{{item.cases}}</td>
+            <td>{{item.todayCases}}</td>
+            <td>{{item.deaths}}</td>
+            <td>{{item.todayDeaths}}</td>
+            <td>{{item.recovered}}</td>
+            <td>{{item.active}}</td>
+            <td>{{item.critical}}</td>
+            <td>{{item.casesPerOneMillion}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,23 @@
+<div class="container-usa">
+    <h3>USA</h3>
+    <table>
+        <tr>
+            <th>State</th>
+            <th>Cases</th>
+            <th>Today's Cases</th>
+            <th>Deaths</th>
+            <th>Today's Deaths</th>
+            <th>Recovered</th>
+            <th>ACtive</th>
+        </tr>
+        <tr *ngFor="let item of restItems">
+            <td>{{item.state}}</td>
+            <td>{{item.cases}}</td>
+            <td>{{item.todayCases}}</td>
+            <td>{{item.deaths}}</td>
+            <td>{{item.todayDeaths}}</td>
+            <td>{{item.recovered}}</td>
+            <td>{{item.active}}</td>
+        </tr>
+    </table>
+</div>
