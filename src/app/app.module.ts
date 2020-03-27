@@ -8,6 +8,7 @@ import { GlobalComponent } from './global/global.component';
 import { USAComponent } from './usa/usa.component';
 import { GeneralInfoComponent } from './general-info/general-info.component';
 import { EuropeComponent } from './europe/europe.component';
+import { ContainerComponent } from './container/container.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { EuropeComponent } from './europe/europe.component';
     GlobalComponent,
     USAComponent,
     GeneralInfoComponent,
-    EuropeComponent
+    EuropeComponent,
+    ContainerComponent
   ],
   imports: [
     BrowserModule,
