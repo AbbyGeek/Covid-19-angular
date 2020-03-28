@@ -1,16 +1,30 @@
-<div class="container-global">
-    <h3>Global Stats</h3>
-    <div *ngIf="globalResult == null; else displayResults ">Loading...</div>
-    <ng-template #displayResults>
-        <p>Total Confirmed</p>
-        <p class="globalCases">{{globalResult.cases}}</p>
-        <p>Total Deaths</p>
-        <p class="globalDeaths">{{globalResult.deaths}}</p>
-        <p>Total Recovered</p>
-        <p class="globalRecovered">{{globalResult.recovered}}</p>
-        <div>
-            <p>Last Updated:</p>
-            <p>{{globalResult.updated | date:'short'}}</p>
+<div class="tcontainer container-global">
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <div class="ticker-item">
+                <div class="flex-row">
+                    <p>Global Cases:</p>
+                    <p class="globalCases">{{ globalResult.cases }}</p>
+                </div>
+            </div>
+            <div class="ticker-item">
+                <div class="flex-row">
+                    <p>Global Deaths: </p>
+                    <p class="globalDeaths">{{ globalResult.deaths }}</p>
+                </div>
+            </div>
+            <div class="ticker-item">
+                <div class="flex-row">
+                    <p>Global Recovered: </p>
+                    <p class="globalRecovered">{{ globalResult.recovered }}</p>
+                </div>
+            </div>
+            <div class="ticker-item">
+                <div class="flex-row">
+                    <p>Last Update</p>
+                    <p>{{ globalResult.updated | date:'short'}}</p>
+                </div>
+            </div>
         </div>
-    </ng-template>    
-</div>
+    </div>
+</div> 
