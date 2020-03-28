@@ -1,11 +1,9 @@
+<app-global></app-global>
 <div>
-    <button (click)="setDisplay('Global')">GLOBAL</button>
     <button (click)="setDisplay('USA')">USA</button>
     <button (click)="setDisplay('Europe')">EUROPE</button>
     <button (click)="setDisplay('General Info')">GENERAL INFO</button>
 </div>
-<app-global *ngIf="tab == 'Global'"></app-global>
 <app-usa *ngIf="tab == 'USA'"></app-usa>
 <app-europe *ngIf="tab == 'Europe'"></app-europe>
-<app-general-info *ngIf="tab == 'General Info'"></app-general-info>
 

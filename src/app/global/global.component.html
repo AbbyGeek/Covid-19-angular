@@ -1,15 +1,31 @@
-<div class="container-global">
-    <h3>Global Stats</h3>
-    <div *ngIf="undefined === restItems">Loading...</div>    <div>
-        <p>Total Confirmed</p>
-        <p class="globalCases">{{restItems.cases}}</p>
-        <p>Total Deaths</p>
-        <p class="globalDeaths">{{restItems.deaths}}</p>
-        <p>Total Recovered</p>
-        <p class="globalRecovered">{{restItems.recovered}}</p>
-    </div>
-    <div>
-        <p>Last Updated:</p>
-        <p>{{restItems.updated | date:'short'}}</p>
+
+<div class="tcontainer container-global">
+    <div class="ticker-wrap">
+        <div class="ticker-move">
+            <div class="ticker-item">
+                <div class="flex-row">
+                    <p>Global Cases:</p>
+                    <p class="globalCases">{{ restItems.cases }}</p>
+                </div>
+            </div>
+            <div class="ticker-item">
+                <div class="flex-row">
+                    <p>Global Deaths: </p>
+                    <p class="globalDeaths">{{ restItems.deaths }}</p>
+                </div>
+            </div>
+            <div class="ticker-item">
+                <div class="flex-row">
+                    <p>Global Recovered: </p>
+                    <p class="globalRecovered">{{ restItems.recovered }}</p>
+                </div>
+            </div>
+            <div class="ticker-item">
+                <div class="flex-row">
+                    <p>Last Update</p>
+                    <p>{{ restItems.updated | date:'short'}}</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
