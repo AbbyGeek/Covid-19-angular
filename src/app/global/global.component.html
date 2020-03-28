@@ -1,15 +1,16 @@
 <div class="container-global">
     <h3>Global Stats</h3>
-    <div *ngIf="undefined === restItems">Loading...</div>    <div>
+    <div *ngIf="globalResult == null; else displayResults ">Loading...</div>
+    <ng-template #displayResults>
         <p>Total Confirmed</p>
-        <p class="globalCases">{{restItems.cases}}</p>
+        <p class="globalCases">{{globalResult.cases}}</p>
         <p>Total Deaths</p>
-        <p class="globalDeaths">{{restItems.deaths}}</p>
+        <p class="globalDeaths">{{globalResult.deaths}}</p>
         <p>Total Recovered</p>
-        <p class="globalRecovered">{{restItems.recovered}}</p>
-    </div>
-    <div>
-        <p>Last Updated:</p>
-        <p>{{restItems.updated | date:'short'}}</p>
-    </div>
+        <p class="globalRecovered">{{globalResult.recovered}}</p>
+        <div>
+            <p>Last Updated:</p>
+            <p>{{globalResult.updated | date:'short'}}</p>
+        </div>
+    </ng-template>    
 </div>

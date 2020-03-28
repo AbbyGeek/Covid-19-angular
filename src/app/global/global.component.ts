@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-global',
@@ -8,27 +6,11 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./global.component.css'],
 })
 export class GlobalComponent implements OnInit {
-  restItems: any;
-  restItemsUrl = 'https://corona.lmao.ninja/all';
+  @Input() globalResult: any;
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   ngOnInit() {
-    this.getRestItems();
   }
   //read all REST items
-  getRestItems(): void {
-    this.restItemsServiceGetRestItems()
-      .subscribe(
-        restItems => {
-          this.restItems = restItems;
-        }
-      )
-  }
-  //Rest Items Service: Read all REST Items
-  restItemsServiceGetRestItems() {
-    return this.http 
-      .get<any[]>(this.restItemsUrl)
-      .pipe(map(data=>data))
-  }
 }
