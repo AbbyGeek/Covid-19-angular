@@ -1,8 +1,11 @@
-<app-global [globalResult]="globalResult"></app-global>
-<div class="tabs">
-    <div class="tab-button" [ngClass]="{'highlighted': tab == 'USA'}" (click)="setDisplay('USA')">USA</div>
-    <div class="tab-button" [ngClass]="{'highlighted': tab == 'Europe'}" (click)="setDisplay('Europe')">EUROPE</div>
-    <div class="tab-button" [ngClass]="{'highlighted': tab == 'General Info'}" (click)="setDisplay('General Info')">GENERAL INFO</div>
+<div class="sticky-header">
+    <app-global [globalResult]="globalResult"></app-global>
+    <div class="tabs">
+        <div class="tab-button" [ngClass]="{'highlighted': tab == 'USA'}" (click)="setDisplay('USA')">USA</div>
+        <div class="tab-button" [ngClass]="{'highlighted': tab == 'Europe'}" (click)="setDisplay('Europe')">EUROPE</div>
+        <div class="tab-button" [ngClass]="{'highlighted': tab == 'General Info'}" (click)="setDisplay('General Info')">
+            GENERAL INFO</div>
+    </div>
 </div>
 <div class="content">
     <app-usa [usaResult]="usaResult" *ngIf="tab == 'USA'"></app-usa>
