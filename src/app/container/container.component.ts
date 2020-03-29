@@ -26,7 +26,7 @@ export class ContainerComponent implements OnInit {
     this.getEurope();
     this.getUsa();
     this.getGeneralInfo();
-    this.tab = "Global";
+    this.tab = "USA";
   }
 
   setDisplay(input: string){
