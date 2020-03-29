@@ -2,3 +2,8 @@
 body {
     background-color: #2a2a28;
 }
+
+th, td {
+    padding: 0em 2em;
+    white-space: nowrap;
+}
