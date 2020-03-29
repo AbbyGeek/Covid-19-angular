@@ -19,3 +19,9 @@
   .highlighted {
       background-color: #342E37;
   }
+
+  .sticky-header {
+      position: sticky;
+      top:0;
+      background-color:  #2a2a28;
+  }
